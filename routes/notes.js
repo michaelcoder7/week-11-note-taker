@@ -10,3 +10,28 @@ notes.get("/", (req, res) => {
   console.info(`${req.method} request received for notes`);
   readFromFile("./db/db.json").then((data) => res.json(JSON.parse(data)));
 });
+
+notes.get("/:note_id", (req, res) => {
+  const noteId = req.params.note_id;
+  readFromFile("./db/db.json")
+    .then((data) => JSON.parse(data))
+    .then((json) => {
+      const result = json.filter((note) => note.tip_id === tipId);
+      return result.length > 0
+        ? res.json(result)
+        : res.json("No note with that ID");
+    });
+});
+
+notes.delete("/:note_id", (req, res) => {
+  const noteId = req.params.note_id;
+  readFromFile("./db/db.json")
+    .then((data) => JSON.parse(data))
+    .then((json) => {
+      const result = json.filter((note) => note.id !== noteId);
+      writeToFile("./db/db.json", result);
+      res.json(`Item ${noteId} has been deleted`);
+    });
+});
+
+notes;
