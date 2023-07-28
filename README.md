@@ -26,6 +26,14 @@ WHEN I click on the Write icon in the navigation at the top of the page
 THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
 ```
 
-## Activities carried out
+## Activities carried out and Relevant Information
+
+Backend of note taker app completed
+
+Package-lock.json file generated
+
+necessary extra files created and linked together for functionality
 
 ## Link to deployed application
+
+https://calm-mountain-56741-9f755967d95d.herokuapp.com/
