@@ -30,7 +30,7 @@ notes.delete("/:note_id", (req, res) => {
     .then((json) => {
       const result = json.filter((note) => note.id !== noteId);
       writeToFile("./db/db.json", result);
-      res.json(`Item ${noteId} has been deleted`);
+      res.json(result);
     });
 });
 
