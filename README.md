@@ -34,6 +34,10 @@ Package-lock.json file generated
 
 necessary extra files created and linked together for functionality
 
+## Screenshot of Web Application
+
+![image](https://github.com/michaelcoder7/week-11-note-taker-app/assets/128432461/3c4853d4-764a-45b6-b9b5-3a6d5b284083)
+
 ## Link to deployed application
 
 https://calm-mountain-56741-9f755967d95d.herokuapp.com/
